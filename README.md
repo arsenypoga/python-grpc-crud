@@ -33,3 +33,12 @@ After doing so you can run the code with
 ```bash
 python ./start.py {client, server} # With either client or server parameter to start it.
 ```
+
+The server will simply run on a given port. 
+The client code starts a shell session with command autocompletion.
+Command list is:
+ * list_all_users
+
+## Possible errors
+
+For whatever reason python might not like the the interface code is generated, which can cause an error like `No module named 'User_pb'`. To fix this, open the file in question (User_pb2_grpc.py) and edit the import line to `from . import User_pb2 as User__pb2`
