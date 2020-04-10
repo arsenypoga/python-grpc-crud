@@ -7,6 +7,9 @@ verify_ssl = true
 pylint = "*"
 
 [packages]
+grpcio = "*"
+grpcio-tools = "*"
+prompt-toolkit = "*"
 
 [requires]
 python_version = "3.8"

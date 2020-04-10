@@ -17,9 +17,9 @@ pipenv install
 The building of the python protobuf code is ignored on purpose, no need to upload same code twice.
 To generate the code needed, ensure that you have protoc compiler installer, or install it with pip using the `grpcio-tools` package.
 
-To generate the stub code run
+To generate the stub code run. This generates both message classes and the Client/Server classes.
 ```bash
-protoc ./User.proto --python_out=./interfaces
+python -m grpc_tools.protoc -I. --python_out=./interfaces --grpc_python_out=./interfaces ./User.proto
 ```
 Which will generate the `User_pb2.py` code in the `interfaces` folder.
 
