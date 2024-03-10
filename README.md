@@ -19,7 +19,7 @@ To generate the code needed, ensure that you have protoc compiler installer, or 
 
 To generate the stub code run. This generates both message classes and the Client/Server classes.
 ```bash
-python -m grpc_tools.protoc -I. --python_out=./interfaces --grpc_python_out=./interfaces ./User.proto
+python -m grpc_tools.protoc --python_out=. --pyi_out=. --grpc_python_out=. ./User.proto -Iinterfaces=.
 ```
 Which will generate the `User_pb2.py` code in the `interfaces` folder.
 
